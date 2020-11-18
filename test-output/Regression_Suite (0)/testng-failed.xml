@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression_Suite (0)]">
+  <parameter name="browser" value="chrome"/>
+  <listeners>
+    <listener class-name="tests.ExtentReport"/>
+  </listeners>
+  <test name="Regresion_Test(failed)">
+    <classes>
+      <class name="tests.TS_FormFillupInvalid">
+        <methods>
+          <include name="TC_wrongData1"/>
+          <include name="TC_wrongData2"/>
+          <include name="TC_wrongData5"/>
+          <include name="TC_wrongData3"/>
+          <include name="TC_InvalidEmail"/>
+          <include name="TC_wrongData6"/>
+          <include name="openWebsite"/>
+          <include name="TC_wrongData4"/>
+          <include name="TC_wrongData7"/>
+          <include name="exitBrowser"/>
+        </methods>
+      </class> <!-- tests.TS_FormFillupInvalid -->
+    </classes>
+  </test> <!-- Regresion_Test(failed) -->
+</suite> <!-- Failed suite [Regression_Suite (0)] -->
