@@ -15,7 +15,7 @@ public class TS_FormFillupInvalid extends BaseClass {
 	public void TC_InvalidEmail() {
 		fill.getCourse();
 		fill.navigateForm();
-		System.out.println("Form Fill-up iniated");
+		System.out.println("Form Fill-up initiated");
 		fill.setFormValues(2);
 		System.out.println("Form filled with invalid details");
 	}

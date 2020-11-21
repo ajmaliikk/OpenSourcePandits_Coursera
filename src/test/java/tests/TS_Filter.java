@@ -1,9 +1,9 @@
 package tests;
 
-import org.testng.annotations.Test;
 //import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.*;
 
+import utilities.JSONRead;
 import functionalities.CourseDetailsFunctionality;
 import functionalities.FilterFunctionality;
 
@@ -22,7 +22,7 @@ public class TS_Filter extends BaseClass{
 	public void languagesDisplayed()
 	{
 		openUrl();
-		details.search("Language Learning");
+		details.search(JSONRead.readJSONData("Course2"));
 		details.searchClick();
 		filter.setLanguage();
 	}

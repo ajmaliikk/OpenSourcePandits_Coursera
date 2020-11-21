@@ -52,7 +52,6 @@ public class BaseUi {
 		// System.out.println("Enter browser name from available options: \n1.
 		// Chrome\n2. Firefox\n3. Opera");
 		System.out.println("Browser selected: " + browser);
-		System.out.println("\nTo change browser selection Go-To README File");
 		// If browser entered is chrome, open chrome browser
 		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver.exe");

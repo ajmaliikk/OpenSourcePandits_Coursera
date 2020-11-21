@@ -2,6 +2,8 @@ package tests;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import utilities.JSONRead;
 import functionalities.CourseDetailsFunctionality;
 
 public class TS_CourseSearch	extends BaseClass {
@@ -15,7 +17,7 @@ public class TS_CourseSearch	extends BaseClass {
 	
 	@Test(priority=1)
 	public void TC_SearchTextBox() {
-		details.search("Web Development");
+		details.search(JSONRead.readJSONData("Course1"));
 	}
 	
 	@Test(priority=2)
@@ -25,21 +27,23 @@ public class TS_CourseSearch	extends BaseClass {
 
 	@Test(priority=3)
 	public void TC_FilterLanguage() {
-		details.filterLanguage("English");
+		details.filterLanguage(JSONRead.readJSONData("Language"));
 	}
 	
 	@Test(priority=4)
 	public void TC_FilterLevel() {
-		details.filterLevel("Beginner");
+		details.filterLevel(JSONRead.readJSONData("Level"));
 	}
 	
 	@Test(priority=5)
 	public void TC_CourseAvailability(){
 		details.getCourseDetails(2);
+		
 	}
 	
 	@Test(priority=6)
 	public void TC_CourseDuration() {
+		
 		details.getCourseDuration(2);
 	}
 
