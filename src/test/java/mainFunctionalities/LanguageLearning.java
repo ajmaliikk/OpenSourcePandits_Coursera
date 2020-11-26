@@ -1,13 +1,14 @@
-package functionalities;
+package mainFunctionalities;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import utilities.*;
-public class FilterFunctionality extends BaseUi {
+import userDefinedLibraries.*;
+public class LanguageLearning extends Utilities {
 
     // Method to apply filters (Language and Level filters)
     public void setLanguage() {
@@ -56,7 +57,7 @@ public class FilterFunctionality extends BaseUi {
 
             // Send all the data to excel
             // Parameters: Data_To_Be_Sent_From, SheetName, Column1_Heading, Column2_Heading
-            SendToExcel.sendData(languageMap, "Language", "LANGUAGE NAME", "INDIVIDUAL COURSE COUNT");
+            ExcelWrite.sendData(languageMap, "Language", "LANGUAGE NAME", "INDIVIDUAL COURSE COUNT");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -86,7 +87,7 @@ public class FilterFunctionality extends BaseUi {
         System.out.println("Levels and their course count");
         lMap = ConvertToMap.convert(levels, levelsCount);
         try {
-            SendToExcel.sendData(lMap, "Level", "LEVEL NAME", "INDIVIDUAL LEVEL COURSES");
+            ExcelWrite.sendData(lMap, "Level", "LEVEL NAME", "INDIVIDUAL LEVEL COURSES");
         } catch (IOException e) {
             e.printStackTrace();
         }

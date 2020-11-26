@@ -1,4 +1,4 @@
-package tests;
+package testScenarios;
 
 
 
@@ -7,9 +7,9 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
-import utilities.BaseUi;
+import userDefinedLibraries.Utilities;
 
-public class BaseClass extends BaseUi{
+public class DriverSetup extends Utilities{
 	
 	
 	public static WebDriver driver;
@@ -20,7 +20,7 @@ public class BaseClass extends BaseUi{
 	{
 		/*          For Grid       */
 		//driver=GridDriver();
-		BaseClass.browse=browser;
+		DriverSetup.browse=browser;
 		driver = getDriver(browser);
 		openUrl();	
 	}

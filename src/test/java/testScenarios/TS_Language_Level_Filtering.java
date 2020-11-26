@@ -1,22 +1,23 @@
-package tests;
+package testScenarios;
 
 //import org.openqa.selenium.support.ui.Select;
+import mainFunctionalities.WebDevelopmentSearch;
+import mainFunctionalities.LanguageLearning;
+
 import org.testng.annotations.*;
 
-import utilities.JSONRead;
-import functionalities.CourseDetailsFunctionality;
-import functionalities.FilterFunctionality;
+import userDefinedLibraries.JSONRead;
 
-public class TS_Filter extends BaseClass{
+public class TS_Language_Level_Filtering extends DriverSetup{
 	
-	public FilterFunctionality filter;
-	public CourseDetailsFunctionality details;
+	public LanguageLearning filter;
+	public WebDevelopmentSearch details;
 
 	@BeforeTest
 	public void TC_initiateClasses()
 	{
-		filter = new FilterFunctionality();
-		details = new CourseDetailsFunctionality();
+		filter = new LanguageLearning();
+		details = new WebDevelopmentSearch();
 	}
 	@Test(priority=1)
 	public void languagesDisplayed()

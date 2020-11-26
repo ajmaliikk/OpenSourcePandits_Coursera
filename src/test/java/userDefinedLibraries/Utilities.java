@@ -1,4 +1,4 @@
-package utilities;
+package userDefinedLibraries;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class BaseUi {
+public class Utilities {
 
 	public static Properties config = new Properties();
 	public static WebDriver driver;
@@ -26,7 +26,7 @@ public class BaseUi {
 	/*
 	 * Creating constructor to initialize properties file
 	 */
-	public BaseUi() {
+	public Utilities() {
 
 		FileReader reader = null;
 		String path = System.getProperty("user.dir") + "/Config.properties";

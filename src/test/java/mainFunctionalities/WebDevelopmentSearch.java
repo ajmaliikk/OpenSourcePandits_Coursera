@@ -1,4 +1,4 @@
-package functionalities;
+package mainFunctionalities;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utilities.*;
+import userDefinedLibraries.*;
 
-public class CourseDetailsFunctionality extends BaseUi{
+public class WebDevelopmentSearch extends Utilities{
 	
 	public ArrayList<String> tabsGUId;
 	public List<WebElement> courseName;
@@ -115,7 +115,7 @@ public class CourseDetailsFunctionality extends BaseUi{
 		}
 		
 		try {
-			SendToExcel.sendData(courseName, courseRating, duration, "Course Details", "COURSE NAME", "COURSE RATING", "COURSE DURATION");
+			ExcelWrite.sendData(courseName, courseRating, duration, "Course Details", "COURSE NAME", "COURSE RATING", "COURSE DURATION");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}	

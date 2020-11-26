@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Regression_Suite">
 <listeners>
-		<listener class-name="tests.ExtentReport" />
+		<listener class-name="testScenarios.ExtentReport" />
 	</listeners>
   <test thread-count="5" name="Regresion_Test">
     <classes>
-      <class name="tests.TS_FormFillupInvalid"/>
+      <class name="testScenarios.TS_CourseraFormFillupInvalid"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

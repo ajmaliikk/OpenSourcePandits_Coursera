@@ -1,8 +1,8 @@
-package tests;
+package testScenarios;
 
 import java.io.IOException;
 
-import utilities.*;
+import userDefinedLibraries.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,7 +25,7 @@ public class ExtentReport extends TestListenerAdapter
 	public ExtentHtmlReporter htmlReporter;
 	public ExtentReports extent;
 	public ExtentTest logger;
-	BaseUi obj = new BaseUi();
+	Utilities obj = new Utilities();
 	
 		
 	public void onStart(ITestContext testContext)
@@ -34,7 +34,7 @@ public class ExtentReport extends TestListenerAdapter
 		 * Setting timeStamp for name
 		 */
 	String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());//time stamp
-		String repName="Test-Report-"+timeStamp+"_"+BaseUi.browse+".html";
+		String repName="Test-Report-"+timeStamp+"_"+Utilities.browse+".html";
 		
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//specify location of the report
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");
@@ -45,7 +45,7 @@ public class ExtentReport extends TestListenerAdapter
 		extent.setSystemInfo("Host name","localhost");
 		extent.setSystemInfo("Environemnt","QEA");
 		extent.setSystemInfo("user","OpenSourcePandits");
-		extent.setSystemInfo("Browser",BaseUi.browse);
+		extent.setSystemInfo("Browser",Utilities.browse);
 		
 		htmlReporter.config().setDocumentTitle("Coursera Project"); // Tile of report
 		htmlReporter.config().setReportName("Functional Test Automation Report"); // name of the report

@@ -1,4 +1,4 @@
-package functionalities;
+package mainFunctionalities;
 
 import java.util.ArrayList;
 //import java.util.Iterator;
@@ -14,9 +14,9 @@ import org.openqa.selenium.support.ui.Select;
 //import org.testng.annotations.DataProvider;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import utilities.*;
+import userDefinedLibraries.*;
 
-public class FormFillingFunctionality extends BaseUi {
+public class CourseraForCampusForm extends Utilities {
 	
 	/*
 	 * Identifying whether Drop down appears or not and acting accordingly 
@@ -72,7 +72,7 @@ public class FormFillingFunctionality extends BaseUi {
 	 * Setting form values
 	 */
 	public void setFormValues(int row) {
-		Input in = new Input();
+		ExcelInput in = new ExcelInput();
 		int column = 0;
 		
 		// for testing purposes

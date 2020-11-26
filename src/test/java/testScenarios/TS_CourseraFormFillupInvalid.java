@@ -1,14 +1,14 @@
-package tests;
+package testScenarios;
+
+import mainFunctionalities.CourseraForCampusForm;
 
 import org.testng.annotations.Test;
 
-import functionalities.FormFillingFunctionality;
-
-public class TS_FormFillupInvalid extends BaseClass {
+public class TS_CourseraFormFillupInvalid extends DriverSetup {
 	
-	BaseClass bc= new BaseClass();
+	DriverSetup bc= new DriverSetup();
 	
-		FormFillingFunctionality fill = new FormFillingFunctionality();
+		CourseraForCampusForm fill = new CourseraForCampusForm();
 		
 	
 	@Test(priority=1)

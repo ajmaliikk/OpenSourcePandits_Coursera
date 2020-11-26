@@ -1,16 +1,17 @@
-package tests;
+package testScenarios;
+
+import mainFunctionalities.CourseraForCampusForm;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
-import functionalities.FormFillingFunctionality;
 
-public class TS_FormFillupValid extends BaseClass {
+public class TS_CourseraFormFillupValid extends DriverSetup {
 	
-	public FormFillingFunctionality fill;
+	public CourseraForCampusForm fill;
 
 	@BeforeTest
 	public void TC_initiateCourse() {
-		fill = new FormFillingFunctionality();
+		fill = new CourseraForCampusForm();
 	}
 	
 	@Test(priority=1)

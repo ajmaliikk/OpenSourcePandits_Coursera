@@ -1,4 +1,4 @@
-package utilities;
+package userDefinedLibraries;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebElement;
 
-public class SendToExcel extends BaseUi{
+public class ExcelWrite extends Utilities{
 
 	// Creating WorkBook
 	static XSSFWorkbook workbook = new XSSFWorkbook();

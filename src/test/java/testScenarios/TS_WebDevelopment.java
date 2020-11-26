@@ -1,18 +1,19 @@
-package tests;
+package testScenarios;
+
+import mainFunctionalities.WebDevelopmentSearch;
 
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import utilities.JSONRead;
-import functionalities.CourseDetailsFunctionality;
+import userDefinedLibraries.JSONRead;
 
-public class TS_CourseSearch	extends BaseClass {
+public class TS_WebDevelopment	extends DriverSetup {
 	
-	public CourseDetailsFunctionality details;
+	public WebDevelopmentSearch details;
 	
 	@BeforeTest
 	public void TC_initiateCourse() {
-		details = new CourseDetailsFunctionality();
+		details = new WebDevelopmentSearch();
 	}
 	
 	@Test(priority=1)
