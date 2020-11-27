@@ -2,6 +2,8 @@ package testScenarios;
 
 
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -18,9 +20,12 @@ public class DriverSetup extends Utilities{
 	@Parameters("browser")
 	public void openWebsite(String browser)
 	{
-		/*          For Grid       */
-		//driver=GridDriver();
 		DriverSetup.browse=browser;
+		/*          For Grid       */
+		
+			//driver=GridDriver();
+		
+		
 		driver = getDriver(browser);
 		openUrl();	
 	}

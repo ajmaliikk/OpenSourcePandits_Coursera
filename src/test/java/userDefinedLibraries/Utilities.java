@@ -4,16 +4,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
+
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.opera.OperaDriver;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -66,13 +69,6 @@ public class Utilities {
 			 driver=new FirefoxDriver();
 
 			// driver = new FirefoxDriver(options);
-		} else if (browser.equalsIgnoreCase("opera")) {
-			// set system property, so that we can access opera driver
-			System.setProperty("webdriver.opera.driver", System.getProperty("user.dir") + "/drivers/operadriver.exe");
-
-			// it will open the opera browser
-			driver = new OperaDriver();
-
 		}
 
 		// Maximize window
@@ -85,15 +81,24 @@ public class Utilities {
 	 * Method to integrate selenium grid
 	 */
 	
-/*	public static WebDriver GridDriver() throws MalformedURLException {
-		String nodeUrl="http://192.168.0.103:43790/wd/hub";
+	/*public static WebDriver GridDriver() throws MalformedURLException {
+		if(browse.equalsIgnoreCase("chrome")){
+		String nodeUrl="http://192.168.43.118:4446/wd/hub";
 		DesiredCapabilities capabilities= DesiredCapabilities.chrome();
 		capabilities.setBrowserName("chrome");
-		capabilities.setPlatform(Platform.WIN10);
+		capabilities.setPlatform(Platform.ANY);
 		driver=new RemoteWebDriver(new URL(nodeUrl),capabilities);
+		}
+		if(browse.equalsIgnoreCase("firefox")){
+			String nodeUrl="http://192.168.43.118:5556/wd/hub";
+			DesiredCapabilities capabilities= DesiredCapabilities.firefox();
+			capabilities.setBrowserName("firefox");
+			capabilities.setPlatform(Platform.ANY);
+			driver=new RemoteWebDriver(new URL(nodeUrl),capabilities);
+			}
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
 		return driver;
 	}*/
 	    
