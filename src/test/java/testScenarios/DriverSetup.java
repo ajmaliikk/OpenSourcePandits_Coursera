@@ -4,6 +4,8 @@ package testScenarios;
 
 
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -23,7 +25,12 @@ public class DriverSetup extends Utilities{
 		DriverSetup.browse=browser;
 		/*          For Grid       */
 		
-			//driver=GridDriver();
+			/*try {
+				driver=GridDriver();
+			} catch (MalformedURLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}*/
 		
 		
 		driver = getDriver(browser);

@@ -83,14 +83,14 @@ public class Utilities {
 	
 	/*public static WebDriver GridDriver() throws MalformedURLException {
 		if(browse.equalsIgnoreCase("chrome")){
-		String nodeUrl="http://192.168.43.118:4446/wd/hub";
+		String nodeUrl="http://192.168.1.102:4446/wd/hub";
 		DesiredCapabilities capabilities= DesiredCapabilities.chrome();
 		capabilities.setBrowserName("chrome");
 		capabilities.setPlatform(Platform.ANY);
 		driver=new RemoteWebDriver(new URL(nodeUrl),capabilities);
 		}
 		if(browse.equalsIgnoreCase("firefox")){
-			String nodeUrl="http://192.168.43.118:5556/wd/hub";
+			String nodeUrl="http://192.168.1.102:5556/wd/hub";
 			DesiredCapabilities capabilities= DesiredCapabilities.firefox();
 			capabilities.setBrowserName("firefox");
 			capabilities.setPlatform(Platform.ANY);
