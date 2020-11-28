@@ -160,6 +160,19 @@ Form filled with invalid details
 Form Fill-up initiated
 Form filled with invalid details
 
+-----------------------------------------------------------------------------------------------------------
+#Testing on Selenium Grid
+-----------------------------------------------------------------------------------------------------------
+
+1.Create a Selenium Grid Hub
+  java -jar selenium-server-standalone-3.141.59.jar -role hub
+
+2.Create Two nodes in the Grid
+  java -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.1.102:4444/grid/register -port 5556
+  java -jar selenium-server-standalone-3.141.59.jar -role webdriver -hub http://192.168.1.102:4444/grid/register -port 4446
+
+3.Change the code by uncommenting the GridDriver() method in utilities class
+4.Run the test
 
 
 -----------------------------------------------------------------------------------------------------------
